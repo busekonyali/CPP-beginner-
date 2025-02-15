@@ -1,0 +1,25 @@
+//arrray tersten yazdırma 
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int i,numbers[4];
+  cout<<"enter numbers:"<<"\n";
+  for(i=0;i<4;i++){
+    cin>>numbers[i];
+  }
+  cout<<"original array"<<"\n";
+   for(i=0;i<4;i++){
+    cout<<numbers[i];
+  }
+  cout<<"\n";
+  cout<<"new array"<<"\n";
+  for(i=3;i>=0;i--){
+    cout<<numbers[i];
+  }
+
+
+
+    return 0;
+}
