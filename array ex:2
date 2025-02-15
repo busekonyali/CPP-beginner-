@@ -1,0 +1,39 @@
+//ççift tek sayı yazma 
+#include <iostream>
+
+using namespace std;
+int main()
+{   int i,x;
+
+    cout<<"enter x: "<<"\n";
+    cin>>x;
+
+    int my[x];
+    cout<<"enter numbers: "<<"\n";
+
+    for(i=0;i<x;i++){
+        cin>>my[i];
+}
+    cout<<"my array: "<<"\n";
+    for(i=0;i<x;i++){
+        cout<<my[i];
+    }
+    cout<<"\n";
+
+    cout<<"even number: "<<"\n";
+    for(i=0;i<x;i++){
+        if(my[i]%2==0){
+            cout<<my[i];
+        }
+    }
+     cout<<"odd number: "<<"\n";
+    for(i=0;i<x;i++){
+        if(my[i]%2!=0){
+            cout<<my[i];
+        }
+    }
+
+
+    return 0;
+
+}
