@@ -1,0 +1,35 @@
+//büyükten küçüğe sıralama
+#include <iostream>
+
+using namespace std;
+int main()
+{
+   int i=0,a[5];
+   cout<<" enter numbers:  "<<endl;
+   for(i=0;i<5;i++){
+    cin>>a[i];
+   }
+   cout<<"my array: "<<endl;
+   for(i=0;i<5;i++){
+    cout<<a[i];
+   }
+   cout<<endl;
+   cout<<"new array: "<<endl;
+   int m=0,r,j=1;
+   for(m=0;m<5;m++){
+    for(j=1+m;j<5;j++){
+    if(a[m]<a[j]){
+    r=a[m];
+    a[m]=a[j];
+    a[j]=r;
+   }
+   }
+   }
+
+for(i=0;i<5;i++){
+    cout<<a[i];
+}
+    return 0;
+
+}
+
