@@ -1,0 +1,40 @@
+//major minor kısa
+#include <iostream>
+
+using namespace std;
+
+int main()
+{   int a;
+cout<<"enter size: "<<endl;
+cin>>a;
+    int mat[a][a];
+    int i,j;
+    for(i=0;i<a;i++){
+        for(j=0;j<a;j++){
+            mat[i][j]=0;
+        }
+
+    }
+
+//minor
+    for(i=0;i<a;i++){
+        mat[i][i]=1;
+        mat[i][a-i-1]=1;
+        }
+
+
+
+
+    cout<<"matrix"<<endl;
+    for(i=0;i<a;i++){
+        for(j=0;j<a;j++){
+            cout<<mat[i][j];
+        }
+         cout<<endl;
+    }
+
+
+
+
+    return 0;
+}
