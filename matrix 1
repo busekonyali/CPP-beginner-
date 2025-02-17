@@ -1,0 +1,47 @@
+//major minor uzun
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int mat[5][5];
+    int i,j;
+    for(i=0;i<5;i++){
+        for(j=0;j<5;j++){
+            mat[i][j]=0;
+        }
+
+    }
+//major
+
+    for(i=0;i<5;i++){
+        for(j=0;j<5;j++){
+           if(i==j){
+            mat[i][j]=1;
+           }
+        }
+}
+//minor
+    for(i=0;i<5;i++){
+        for(j=4;j>=0;j--){
+          if(i+j==4){
+            mat[i][j]=1;
+        }
+}
+    }
+
+
+    cout<<"matrix"<<endl;
+    for(i=0;i<5;i++){
+        for(j=0;j<5;j++){
+            cout<<mat[i][j];
+        }
+         cout<<endl;
+    }
+
+
+
+
+    return 0;
+}
