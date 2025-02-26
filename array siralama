@@ -1,0 +1,50 @@
+#include <iostream>
+
+using namespace std;
+void write(int arr[],int size);
+void siralama(int arr[],int size);
+int main()
+{
+    int x,i;
+    cout<<"enter x"<<endl;
+    cin>>x;
+    int arr[x];
+    cout<<"enter numbers: "<<endl;
+    for(i=0;i<x;i++){
+        cin>>arr[i];
+    }
+    cout<<"your array"<<endl;
+    write(arr,x);
+    cout<<endl;
+    cout<<"sirali array"<<endl;
+   siralama(arr,x);
+    write(arr,x);
+    cout<<endl;
+    cout<<"en kucuk: "<<" "<<arr[0];
+
+
+
+
+    return 0;
+}
+void siralama(int arr[],int size){
+    int i,j,reserve=0;
+     for(i=0;i<size;i++){
+        for(j=1+i;j<size;j++){
+    if(arr[i]>arr[j]){
+        reserve=arr[i];
+        arr[i]=arr[j];
+        arr[j]=reserve;
+    }
+            }
+    }
+
+
+
+}
+void write(int arr[],int size){
+    int i;
+    for(i=0;i<size;i++){
+        cout<<arr[i]<<" ";
+    }
+}
