@@ -1,0 +1,41 @@
+#include <iostream>
+#define SATIS_TOPLAMI(fiyat,miktar)    ((fiyat)*(miktar))
+#define KDV_HESAPLA(fiyat,oran)        (((fiyat)*(oran))/100)
+#define INIDIRIM_HESAPLA(fiyat,oran)   (((fiyat)*(oran))/100)
+#define NIHAI_FIYAT(fiyat, kdv, indirim) ((fiyat) + (kdv) - (indirim))
+
+using namespace std;
+
+int main() {
+    string ad[10];
+    int sayi;
+    cout<<"urun syisi";
+    cin>>sayi;
+     cin.ignore();
+    cout<<"urun adi: "<<endl;
+    for(int i=0;i<sayi;i++){
+         getline(cin, ad[i]);
+
+
+    }
+    int fiyat,miktar,oran,oran2;
+    cout<<"enter fiyat: "<<endl;
+    cin>>fiyat;
+    cout<<"enter miktar: "<<endl;
+    cin>>miktar;
+    cout<<"enter kdv: "<<endl;
+    cin>>oran;
+    cout<<"enter indirim: "<<endl;
+cin>>oran2;
+ int kdv = KDV_HESAPLA(fiyat, oran);  // KDV'yi hesapla
+    int indirim = INIDIRIM_HESAPLA(fiyat, oran2);
+
+     for(int i=0;i<sayi;i++){
+        cout<<"urun adi: "<<ad[i]<<endl;
+    }
+    cout<<"toplam satiş tutari: "<< SATIS_TOPLAMI(fiyat,miktar)<<endl;
+    cout<<"kdv: "<<KDV_HESAPLA(fiyat,oran)<<endl;
+    cout<<"indirim tutarı: "<<INIDIRIM_HESAPLA(fiyat,oran2)<<endl;
+    cout<<"nihayi fiyat: "<<NIHAI_FIYAT(fiyat,kdv,indirim)<<endl;
+    return 0;
+}
