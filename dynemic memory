@@ -1,0 +1,50 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+int size;
+cout<<"enter size";
+cin>>size;
+
+
+int *arr =new int[size];
+cout<<"enter numbers"<<endl;
+for(int i=0;i<size;i++){
+    cin>>arr[i];
+}
+
+
+int sum=0;
+for(int i=0;i<size;i++){
+    sum+=arr[i];
+}
+cout<<"sum:"<<sum;
+int m=arr[0];
+for(int i=0;i<size;i++){
+
+    if(arr[i]<m){
+    m=arr[i];
+    }
+}
+cout<<endl;
+cout<<"min:"<<m;
+
+    int n=arr[0];
+
+for(int i=0;i<size;i++){
+
+    if(arr[i]>n){
+    n=arr[i];
+    }
+}
+cout<<endl;
+cout<<"max:"<<n;
+
+
+
+delete[] arr;
+
+    return 0;
+}
